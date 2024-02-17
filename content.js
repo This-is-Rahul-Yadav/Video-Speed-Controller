@@ -1,22 +1,3 @@
-// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-//     if (message.type === 'set_speed') {
-    
-//         modifySpeed(message);
-//     }
-//   });
-  
-
-//   function modifySpeed(message){
-//     let speed = parseFloat(message.speed);
-//     let videos = document.getElementsByTagName('video');
-//     for (let i = 0; i < videos.length; i++) {
-//       console.log(`Setting speed to ${speed}, video: ${getDomPath(videos[i])}`);
-//       videos[i].playbackRate = speed;
-//     }
-
-//   }
-
-
 function setSpeed(document, speed) {
     let videos = document.getElementsByTagName('video');
     console.log(`found ${videos.length} videos on doc.`);
@@ -69,8 +50,6 @@ function setSpeed(document, speed) {
 
   // Manipulate video scrubbing and playback speed
 document.addEventListener("keydown", function(e) {
-    // var video = document.querySelector('video') || document.querySelector('#mainvideo');
-    // let num = -1;
     console.log('key code is: ', e.code);
     modifyAllVideos(document, e.code);
 });
